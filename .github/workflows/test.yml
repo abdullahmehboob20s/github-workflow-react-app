@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: npm run test
   deploy:
+    needs: test # runs after each other because of this line. Else it will run in parallel with "test" job
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
