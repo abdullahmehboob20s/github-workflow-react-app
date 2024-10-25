@@ -1,0 +1,10 @@
+name: Testing Expressions
+env:
+  MY_ENV: "Abdullah Mehboob"
+on: [workflow_dispatch]
+jobs:
+  display-name-from-env:
+    name: Get Name From ENV
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{env.MY_ENV}}"
